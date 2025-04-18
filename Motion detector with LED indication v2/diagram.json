@@ -1,0 +1,38 @@
+{
+    "version": 1,
+    "author": "Abdul Khaled Arafat",
+    "editor": "wokwi",
+    "parts": [
+      { "type": "wokwi-arduino-uno", "id": "uno", "top": 77.4, "left": 28.2, "attrs": {} },
+      { "type": "wokwi-relay-module", "id": "relay1", "top": 201.8, "left": 499.2, "attrs": {} },
+      { "type": "wokwi-pir-motion-sensor", "id": "pir1", "top": -92, "left": 117.42, "attrs": {} },
+      {
+        "type": "wokwi-led",
+        "id": "led1",
+        "top": -13.2,
+        "left": 445.4,
+        "attrs": { "color": "green", "flip": "1" }
+      },
+      {
+        "type": "wokwi-resistor",
+        "id": "r1",
+        "top": 72,
+        "left": 412.25,
+        "rotate": 90,
+        "attrs": { "value": "1000" }
+      }
+    ],
+    "connections": [
+      [ "pir1:OUT", "uno:6", "green", [ "v57.6", "h57.46" ] ],
+      [ "pir1:VCC", "uno:5V", "red", [ "v57.6", "h-192", "v297.6", "h240" ] ],
+      [ "relay1:VCC", "uno:5V", "red", [ "h-48", "v124.8", "h-38.4" ] ],
+      [ "pir1:GND", "uno:GND.1", "black", [ "v38.4", "h-67.46" ] ],
+      [ "led1:A", "r1:1", "green", [ "v0" ] ],
+      [ "uno:3", "r1:2", "green", [ "v-28.8", "h128.8", "v48" ] ],
+      [ "uno:3", "relay1:IN", "green", [ "v-28.8", "h128.8", "v182.4" ] ],
+      [ "relay1:GND", "uno:GND.2", "black", [ "h-28.8", "v-0.4", "h-124.8", "v86.4", "h-134.4" ] ],
+      [ "led1:C", "relay1:GND", "green", [ "v0" ] ]
+    ],
+    "dependencies": {}
+  }
+  

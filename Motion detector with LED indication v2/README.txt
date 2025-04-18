@@ -1,0 +1,1 @@
+Used 1 LED to indicate when motion is detected.

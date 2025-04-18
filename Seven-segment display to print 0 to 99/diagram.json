@@ -1,0 +1,42 @@
+{
+    "version": 1,
+    "author": "Abdul Khaled Arafat",
+    "editor": "wokwi",
+    "parts": [
+      { "type": "wokwi-arduino-uno", "id": "uno", "top": 29.4, "left": -0.6, "attrs": {} },
+      {
+        "type": "wokwi-7segment",
+        "id": "sevseg1",
+        "top": -91.02,
+        "left": 187.48,
+        "attrs": { "common": "cathode" }
+      },
+      {
+        "type": "wokwi-7segment",
+        "id": "sevseg2",
+        "top": -91.02,
+        "left": 81.88,
+        "attrs": { "common": "cathode" }
+      }
+    ],
+    "connections": [
+      [ "sevseg1:A", "uno:2", "green", [ "v-18.36", "h28.8", "v115.2", "h-9.6" ] ],
+      [ "sevseg1:B", "uno:3", "green", [ "v-8.76", "h9.6", "v96", "h-9.6" ] ],
+      [ "sevseg1:C", "uno:4", "green", [ "v0" ] ],
+      [ "sevseg1:D", "uno:5", "green", [ "v9.6", "h9.6" ] ],
+      [ "sevseg1:E", "uno:6", "green", [ "v19.2", "h9.6" ] ],
+      [ "sevseg1:F", "uno:7", "green", [ "v-8.76", "h-19.2", "v96", "h9.6", "v9.6" ] ],
+      [ "sevseg1:G", "uno:8", "green", [ "v0.84", "h-19.2", "v105.6", "h9.6" ] ],
+      [ "sevseg1:COM.2", "uno:GND.2", "red", [ "h0", "v-37.56", "h105.6", "v403.2", "h-144" ] ],
+      [ "sevseg2:A", "uno:9", "green", [ "v-37.56", "h38.4", "v9.6" ] ],
+      [ "sevseg2:B", "uno:10", "green", [ "v-18.36", "h19.2" ] ],
+      [ "sevseg2:C", "uno:11", "green", [ "v19.2", "h19.2" ] ],
+      [ "sevseg2:D", "uno:12", "green", [ "v28.8", "h28.8" ] ],
+      [ "sevseg2:E", "uno:13", "green", [ "v28.8", "h-28.8", "v9.6", "h66.8" ] ],
+      [ "sevseg2:F", "uno:A0", "green", [ "v-37.56", "h-144", "v422.4", "h255.4" ] ],
+      [ "sevseg2:G", "uno:A1", "green", [ "v-66.36", "h-172.8", "v470.4", "h303.3" ] ],
+      [ "sevseg2:COM.2", "uno:GND.2", "red", [ "v-47.16", "h-124.8", "v412.8", "h188.1" ] ]
+    ],
+    "dependencies": {}
+  }
+  

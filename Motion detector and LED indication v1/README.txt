@@ -1,0 +1,1 @@
+Used 2 LED  to give status of when motion detected and when not detected

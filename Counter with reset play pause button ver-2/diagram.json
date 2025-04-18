@@ -1,0 +1,41 @@
+{
+    "version": 1,
+    "author": "Abdul Khaled Arafat",
+    "editor": "wokwi",
+    "parts": [
+      { "type": "wokwi-arduino-uno", "id": "uno", "top": -28.2, "left": 181.8, "attrs": {} },
+      {
+        "type": "wokwi-tm1637-7segment",
+        "id": "sevseg1",
+        "top": 9.56,
+        "left": -60.17,
+        "attrs": { "color": "red" }
+      },
+      {
+        "type": "wokwi-pushbutton",
+        "id": "btn1",
+        "top": -51.4,
+        "left": 528,
+        "attrs": { "color": "red", "bounce": "0" }
+      },
+      {
+        "type": "wokwi-pushbutton",
+        "id": "btn2",
+        "top": 92.6,
+        "left": 528,
+        "attrs": { "color": "green", "bounce": "0", "key": "z" }
+      }
+    ],
+    "connections": [
+      [ "sevseg1:VCC", "uno:5V", "red", [ "h48", "v144", "h182.4" ] ],
+      [ "sevseg1:GND", "uno:GND.2", "black", [ "h38.4", "v153.6", "h201.6" ] ],
+      [ "uno:13", "sevseg1:DIO", "green", [ "v-28.8", "h-153.2", "v96" ] ],
+      [ "sevseg1:CLK", "uno:12", "green", [ "h28.8", "v-96", "h172.8" ] ],
+      [ "btn1:1.l", "uno:6", "green", [ "h0", "v-38.4", "h-144" ] ],
+      [ "btn2:1.l", "uno:5", "green", [ "h-38.4", "v-163.2", "h-96" ] ],
+      [ "uno:5V", "btn1:2.l", "red", [ "v38.3", "h167", "v-220.8" ] ],
+      [ "uno:5V", "btn2:2.l", "red", [ "v38.3", "h167", "v-76.8" ] ]
+    ],
+    "dependencies": {}
+  }
+  

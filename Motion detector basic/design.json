@@ -1,0 +1,20 @@
+{
+    "version": 1,
+    "author": "Anonymous maker",
+    "editor": "wokwi",
+    "parts": [
+      { "type": "wokwi-arduino-uno", "id": "uno", "top": 29.4, "left": 28.2, "attrs": {} },
+      { "type": "wokwi-pir-motion-sensor", "id": "pir1", "top": -149.6, "left": 79.02, "attrs": {} },
+      { "type": "wokwi-relay-module", "id": "relay1", "top": -115, "left": 288, "attrs": {} }
+    ],
+    "connections": [
+      [ "pir1:OUT", "uno:6", "green", [ "v38.4", "h67.06" ] ],
+      [ "relay1:IN", "uno:3", "green", [ "h0" ] ],
+      [ "pir1:VCC", "uno:5V", "red", [ "v28.8", "h-172.8", "v297.6", "h220.8" ] ],
+      [ "relay1:VCC", "uno:5V", "red", [ "h-19.2", "v-96", "h-345.6", "v480", "h230.4" ] ],
+      [ "relay1:GND", "uno:GND.1", "black", [ "h-86.4", "v57.2", "h-38.4" ] ],
+      [ "pir1:GND", "uno:GND.1", "black", [ "v0" ] ]
+    ],
+    "dependencies": {}
+  }
+  
